@@ -1,0 +1,26 @@
+{{#if users}}
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Password</th>
+        </tr>
+    </thead>
+    {{#each users}}
+    <tbody>
+        <tr>
+            <td>{{_id}}</td>
+            <td>{{username}}</td>
+            <td>{{password}}</td>
+        </tr>
+    </tbody>
+    {{/each}}
+</table>
+{{/if}}
+
+<form action="/users/add" method="POST">
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <input type="submit" value="Submit">
+</form>
