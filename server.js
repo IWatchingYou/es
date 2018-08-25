@@ -23,8 +23,10 @@ const port = process.env.port || 3000;
 
 var User = require('./routes/user');
 var Index = require('./routes/index');
+var Work = require('./routes/work_order');
 
 app.use('/user', User);
 app.use('/', Index);
+app.use('/workorder', Work);
 
 app.listen(port,() => console.log(`app is listening on port ${port}`));
